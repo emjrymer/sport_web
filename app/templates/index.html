@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-image: url("http://img10.deviantart.net/3625/i/2012/300/2/a/seattle_seahawks_wallpaper_by_jdot2dap-d5j34oh.jpg");
+            background-attachment:fixed;
+            margin: 7%;
+            padding-bottom: 10%;
+        }
+
+        h1 {
+        text-align: center;
+        background-color: #73CAF5;
+        margin: 0 auto;
+        color: #021D4F;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border: dashed;
+        padding-right: 0px;
+        }
+
+        #contents{
+        background-color: transparent;
+        }
+
+        #playername{
+            font-family: Impact;
+            text-transform: uppercase;
+            font-size: x-large;
+        }
+        th{
+            background-color: #6AE81C
+        }
+
+        table {
+            margin: 20px auto;
+            background-color: #73CAF5;
+            float: left;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Sport Data thing</title>
+</head>
+<body>
+<div id="contents">
+<h1>Seattle Seahawks Rushing Stats 2013</h1>
+{% for player in players %}
+    <table width="400" class="highlight"  border="2"cellpadding="5" cellspacing="5" bordercolor="#021D4F">
+    <tr>
+    <th><div id = "playername">{{ player}}</div></th>
+    </tr>
+    <tr>
+    <td>ATT:  {{ player.att }}</td>
+    </tr>
+    <tr>
+    <td>YDS:  {{ player.yds }}</td>
+    </tr>
+    <tr>
+    <td>AVG:  {{ player.avg }}</td>
+    </tr>
+    <tr>
+    <td>LONG:  {{ player.long }}</td>
+    </tr>
+    <tr>
+    <td>TD:  {{ player.td }}</td>
+    </tr>
+    </table>
+{% endfor %}
+</div>
+</body>
+</html>
